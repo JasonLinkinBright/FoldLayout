@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FoldLayout</string>
+
+    <!-- 我的页面列表的Behavior -->
+    <string name="behavior_mine_content">com.jason.foldlayout.behavior.MineContentBehavior</string>
+    <!-- 用户信息背景Behavior -->
+    <string name="behavior_user_info">com.jason.foldlayout.behavior.UserInfoBehavior</string>
+    <!-- 用户名Behavior -->
+    <string name="behavior_user_name">com.jason.foldlayout.behavior.UserNameBehavior</string>
+    <!-- 顶部导航栏背景Behavior -->
+    <string name="behavior_navigation_bar">com.jason.foldlayout.behavior.NavigationBarBehavior</string>
+    <!-- 头像Behavior -->
+    <string name="behavior_avatar">com.jason.foldlayout.behavior.AvatarBehavior</string>
+    <!-- 用户身份Behavior -->
+    <string name="behavior_user_level">com.jason.foldlayout.behavior.LevelBehavior</string>
+</resources>

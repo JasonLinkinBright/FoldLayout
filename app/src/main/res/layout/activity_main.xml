@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_behavior="@string/behavior_mine_content" />
+
+    <ImageView
+        android:id="@+id/backdrop"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mine_bg"
+        app:layout_behavior="@string/behavior_navigation_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rlUserInfo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_navigation_bar_height"
+        android:background="@android:color/white"
+        android:elevation="@dimen/dimen_mine_elevation"
+        app:layout_behavior="@string/behavior_user_info">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:ellipsize="end"
+            android:maxEms="4"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="@dimen/textsize_big"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvUserName"
+            android:layout_marginLeft="110dp"
+            android:ellipsize="end"
+            android:maxEms="7"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="@dimen/textsize_small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_praise"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <cn.bingoogolapple.badgeview.BGABadgeTextView
+                    android:id="@+id/tvPraiseCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textSize="@dimen/dimen_text_size_huge" />
+
+                <TextView
+                    android:id="@+id/tvPraise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="赞"
+                    android:textSize="@dimen/textsize_small" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="0.5dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="#8D9498" />
+
+            <LinearLayout
+                android:id="@+id/ll_fans"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <cn.bingoogolapple.badgeview.BGABadgeTextView
+                    android:id="@+id/tvFansCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textSize="@dimen/dimen_text_size_huge" />
+
+                <TextView
+                    android:id="@+id/tvFans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="粉丝"
+                    android:textSize="@dimen/textsize_small" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="0.5dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="#8D9498" />
+
+            <LinearLayout
+                android:id="@+id/ll_focus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <cn.bingoogolapple.badgeview.BGABadgeTextView
+                    android:id="@+id/tvAttentionCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textSize="@dimen/dimen_text_size_huge" />
+
+
+                <TextView
+                    android:id="@+id/tvAttention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="关注"
+                    android:textSize="@dimen/textsize_small" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_medal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/icon_medal"
+                android:text="我的勋章"
+                android:textSize="10sp" />
+
+            <cn.bingoogolapple.badgeview.BGABadgeTextView
+                android:id="@+id/tv_medal_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/tv_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6dp"
+                android:drawableTop="@drawable/icon_gold"
+                android:text="我的知币"
+                android:textSize="10sp" />
+
+            <cn.bingoogolapple.badgeview.BGABadgeTextView
+                android:id="@+id/tv_coin_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:text="0" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:maxEms="64"
+            android:maxLength="64" />
+
+        <TextView
+            android:id="@+id/tv_focus_each_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/app_theme_color"
+            android:clickable="true"
+            android:maxLines="1"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ebebeb" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="@dimen/dimen_avatar_default_size"
+        android:layout_height="@dimen/dimen_avatar_default_size"
+        android:elevation="@dimen/dimen_mine_elevation"
+        app:layout_behavior="@string/behavior_avatar">
+
+        <ImageView
+            android:id="@+id/iv_identity"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="bottom|end"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_diamond"
+            android:visibility="gone" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+
+    <cn.bingoogolapple.badgeview.BGABadgeLinearLayout
+        android:id="@+id/bll_user_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dimen_mine_elevation"
+        android:paddingRight="9dp"
+        app:layout_behavior="@string/behavior_user_level">
+
+        <TextView
+            android:id="@+id/tv_user_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/white" />
+
+    </cn.bingoogolapple.badgeview.BGABadgeLinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_title_bar_height"
+        android:layout_marginTop="20dp"
+        android:elevation="@dimen/dimen_mine_elevation">
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/ib_scan"-->
+            <!--style="@style/style_ib"-->
+            <!--android:src="@drawable/icon_scan" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/ib_setting"-->
+            <!--style="@style/style_ib"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:src="@drawable/icon_setting" />-->
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,125 @@
+[
+  {
+    "itemType": 3
+  },
+  {
+    "icName": "ic_msg",
+    "itemText": "我的消息",
+    "itemType": 1,
+    "url": "/main/find/message/noticeList.html",
+    "keyName": "myMsgCount"
+  },
+  {
+    "itemType": 3
+  },
+  {
+    "icName": "ic_question",
+    "itemText": "我的提问",
+    "itemType": 1,
+    "url": "/main/mine/user/myList/myQuestion.html?type=myQuestion",
+    "keyName": "questionMsgCount"
+  },
+  {
+    "itemType": 2
+  },
+  {
+    "icName": "ic_answer",
+    "itemText": "我的回答",
+    "itemType": 1,
+    "url": "/main/mine/user/myList/myAnswer.html",
+    "keyName": "answerMsgCount"
+  },
+  {
+    "itemType": 2
+  },
+  {
+    "icName": "ic_share",
+    "itemText": "我的分享",
+    "itemType": 1,
+    "url": "/main/mine/user/myList/myShare.html",
+    "keyName": "shareMsgCount"
+  },
+  {
+    "itemType": 2
+  },
+  {
+    "icName": "ic_draft",
+    "itemText": "我的草稿",
+    "itemType": 1,
+    "url": "/main/mine/user/myList/myDraft.html",
+    "keyName": "draftCount"
+  },
+  {
+    "itemType": 3
+  },
+  {
+    "icName": "ic_courses",
+    "itemText": "我的课程",
+    "itemType": 1,
+    "url": "/main/mine/user/myList/myCourse.html",
+    "keyName": "courseMsgCount"
+  },
+  {
+    "itemType": 2
+  },
+  {
+    "icName": "ic_test",
+    "itemText": "我的考试",
+    "itemType": 1,
+    "url": "/expect.html",
+    "keyName": "testMsgCount"
+  },
+  {
+    "itemType": 2
+  },
+  {
+    "icName": "ic_research",
+    "itemText": "调研问卷",
+    "itemType": 1,
+    "url": "/expect.html",
+    "keyName": "questionnaireMsgCount"
+  },
+  {
+    "itemType": 2
+  },
+  {
+    "icName": "ic_training",
+    "itemText": "我的培训班",
+    "itemType": 1,
+    "url": "/expect.html",
+    "keyName": "classMsgCount"
+  },
+  {
+    "itemType": 3
+  },
+  {
+    "icName": "ic_topic",
+    "itemText": "关注话题",
+    "itemType": 1,
+    "url": "/main/mine/user/myList/myFocuseTopic.html",
+    "keyName": "focusTopicCount"
+  },
+  {
+    "itemType": 2
+  },
+  {
+    "icName": "ic_attention_question",
+    "itemText": "关注问题",
+    "itemType": 1,
+    "url": "/main/mine/user/myList/myQuestion.html?type=focusQuestion",
+    "keyName": "focusQuestionCount"
+  },
+  {
+    "itemType": 2
+  },
+  {
+    "icName": "ic_collection",
+    "itemText": "我的收藏",
+    "itemType": 1,
+    "url": "/main/mine/user/myList/myCollect.html",
+    "keyName": ""
+  },
+  {
+    "itemType": 3
+  }
+]

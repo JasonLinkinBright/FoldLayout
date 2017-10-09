@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/gray_eb">
+
+    <com.jason.foldlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="#ffdd00">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_other_medal" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_other_medal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:gravity="center"
+            android:text="他的勋章"
+            android:textSize="@dimen/textsize_normal"
+            app:layout_widthPercent="30%" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_medal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/right_line"
+            android:layout_toRightOf="@id/tv_other_medal" />
+
+        <View
+            android:id="@id/right_line"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:background="#ffdd00"
+            app:layout_widthPercent="1%" />
+
+    </com.jason.foldlayout.widget.PercentRelativeLayout>>
+
+</RelativeLayout>
